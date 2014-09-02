@@ -1,4 +1,4 @@
-Snake---Pascal
-==============
+Snake
+=====
 
 Jogo Snake em Pascal
