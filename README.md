@@ -1,8 +1,7 @@
 Snake
 =====
 
-
-Jogo Snake em Pascal
+Snake Game
 
 
 #To Install
