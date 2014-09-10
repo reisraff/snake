@@ -21,6 +21,9 @@
 }
 Program snake;
 
+{uses crt;}{ to linux}
+{uses wincrt;}{ to windows}
+
 	function direction(key:char):integer;
 	begin
 		case key of
