@@ -15,10 +15,9 @@ On Linux you need to install `fpc` packet:
 
 Compilling:
 
-`
-cd directory-of-snake
-fpc snake.pas
-`
+`cd directory-of-snake`
+`fpc snake.pas`
+
 Maybe you will need to alter the `uses` block adding `uses crt` to linux and `uses wincrt` to windows
 
 After compiled just:
