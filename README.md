@@ -3,6 +3,7 @@ Snake
 
 Snake Game
 
+![Screenshot](https://github.com/rafreis/Snake/blob/master/Screenshot.png)
 
 #To Install
 
