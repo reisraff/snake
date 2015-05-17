@@ -1,27 +1,6 @@
-{
-    Programa: Snake-ZicaDoBaile
-    Descrição: Snake procura ponto alimento e a cada ponto alimento comido, corpo da snake cresce 1 e diminui 5 de delay
-    Programador: Rafael Reis
-    Data: 22/05/2013
-    Hora: 23:40
-    Bugs Identificados:
-        1 => problema com case quando corpo da cobra já grande e fica incisivamente precionando direção contrária.
-        2 => problema com case quando muda a direção corpo da cobra perde 1 ponto, sendo assim quando com 5 pontos
-            de corpo não é possivel esbarrar no próprio corpo.
-                EX.:
-                     Cabeça ponto = @
-                     proxima direção é para cima, seguindo a lógica o rabo perde 1 ficando um quadrado donde o @
-                     cobre um * executando um conflito no corpo da cobra
-                         _ _ _ _ _ _         _ _ _ _ _ _ _
-                        |            |      |             |
-                        |   ***      |      |  *@         |
-                        |   *@       |      |  **         |
-                        |            |      |             |
-                        |_ _ _ _ _ _ |      |_ _ _ _ _ _ _|
-}
 Program snake;
 
-uses crt;{ to linux}
+{uses crt;}{ to linux}
 {uses wincrt;}{ to windows}
 
     function direction(key:char):integer;
@@ -29,10 +8,10 @@ uses crt;{ to linux}
         case key of
 
             #72 : direction:=1; //seta pra cima
-            #77 : direction:=2;    //seta pra direita
-            #80 : direction:=3;    //seta pra baixo
-            #75 : direction:=4;    //seta pra esquerda
-            //else continue;
+            #77 : direction:=2; //seta pra direita
+            #80 : direction:=3; //seta pra baixo
+            #75 : direction:=4; //seta pra esquerda
+            // else continue;
 
         end;
     end;
@@ -56,7 +35,7 @@ uses crt;{ to linux}
                 end;
             end;
             gotoxy(27,23);
-            write('APERTE ENTER PARA COMEÇAR!!!');
+            write('PUSH ENTER TO START!!!');
         end
         else
         begin
@@ -71,7 +50,7 @@ uses crt;{ to linux}
             end;
 
             gotoxy(35,23);
-            write('Você perdeu');
+            write('YOU LOSE');
         end;
 
     end;
@@ -111,9 +90,9 @@ Begin
             start := true;
             stop := false;
             gotoxy(24,22);
-            write('APERTE  P  PARA PAUSAR O JOGO');
+            write('PUSH P TO STOP THE GAME');
             gotoxy(24,23);
-            write('APERTE  CTRL + C  PARA PARAR O JOGO');
+            write('PUSH CTRL + C TO END THE GAME');
         end;
 
         if keypressed then
