@@ -1,6 +1,6 @@
 Program snake;
 
-{uses crt;}{ to linux}
+uses crt;{ to linux}
 {uses wincrt;}{ to windows}
 
     function direction(key:char):integer;
@@ -73,6 +73,7 @@ Begin
     d := 2;
     c := 1;
     start := false;
+    stop := false;
     mountScreen(true);
 
     //Inicio do *
@@ -93,6 +94,8 @@ Begin
             write('PUSH P TO STOP THE GAME');
             gotoxy(24,23);
             write('PUSH CTRL + C TO END THE GAME');
+            gotoxy(2,24);
+            write('POINTS: ', c);
         end;
 
         if keypressed then
@@ -158,6 +161,8 @@ Begin
         if ((x=cx) and (y=cy)) then
         begin
             c := c+1;
+            gotoxy(2,24);
+            write('POINTS: ', c);
             if time <> 0 then
                 time := time - 5;
         end;
@@ -215,7 +220,7 @@ Begin
 
         delay(time);
 
-          for i := 7 to c do
+        for i := 7 to c do
         begin
             if ((x=SBx[i]) and (y=SBy[i])) then
             begin
@@ -226,7 +231,8 @@ Begin
                 break;
             end;
         end;
-          if ((x=1)or(x=80)or(y=1)or(y=21)) then
+
+        if ((x=1)or(x=80)or(y=1)or(y=21)) then
         begin
             gotoxy(x,y);
             write('X');
